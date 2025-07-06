@@ -15,7 +15,7 @@ A simple, mobile-friendly Laravel application for managing a milk dairy farm wit
 - Composer
 - Node.js & npm
 - MySQL or SQLite (default: SQLite)
-- **Or:** [Laravel Sail](https://laravel.com/docs/12.x/sail) (Docker, recommended for easy setup)
+- **Or:** [Laravel Sail](https://laravel.com/docs/12.x/sail) (Docker, recommended for easy setup: MySQL, Redis, Mailpit)
 
 ## Installation
 
@@ -31,6 +31,7 @@ A simple, mobile-friendly Laravel application for managing a milk dairy farm wit
    ```bash
    cp .env.example .env
    # Edit .env if you want to change default database or other settings
+   # Remove or comment out any MEILISEARCH_* lines if present
    ```
 
 3. **Start Sail containers:**
