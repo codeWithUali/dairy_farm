@@ -1,12 +1,12 @@
 # Dairy Farm Management App
 
-A simple, mobile-friendly Laravel app for managing a milk dairy farm with buffaloes. Built with Laravel, Livewire, and Bootstrap 5 for fast, easy data entry by non-technical users.
+A simple, mobile-friendly Laravel application for managing a milk dairy farm with buffaloes. This app is designed for fast, easy data entry by non-technical users, using a 4-digit user code for login. Built with Laravel, Livewire, and Bootstrap 5.
 
 ## Features
-- **4-digit User Login:** Quick login with a 4-digit user code (no password).
-- **Record Milk Production:** Enter animal ID, record milk quantity with a plus/minus counter.
-- **Record Animal Medication:** Enter animal ID, select medicine type (enum), add optional comments.
-- **History Views:** See milk and medicine history, sorted by date, with user and animal info.
+- **4-digit User Login:** Quick login with a 4-digit user code (no password required).
+- **Record Milk Production:** Enter animal ID, record milk quantity with a plus/minus counter, and save.
+- **Record Animal Medication:** Enter animal ID, select medicine type (enum: fever, allergy, vaccine, birth issue, bacteria, virus), add optional comments, and save.
+- **History Views:** View milk and medicine history, sorted by date, with user and animal info.
 - **Mobile-First UI:** Large buttons, simple forms, and easy navigation for use on phones.
 - **Session-based Logout:** Secure, one-tap logout from any main screen.
 
@@ -15,8 +15,43 @@ A simple, mobile-friendly Laravel app for managing a milk dairy farm with buffal
 - Composer
 - Node.js & npm
 - MySQL or SQLite (default: SQLite)
+- **Or:** [Laravel Sail](https://laravel.com/docs/12.x/sail) (Docker, recommended for easy setup)
 
 ## Installation
+
+### Option 1: Using Laravel Sail (Docker, recommended)
+
+1. **Clone the repository:**
+   ```bash
+   git clone git@github.com:codeWithUali/dairy_farm.git
+   cd dairy_farm
+   ```
+
+2. **Copy and edit environment file:**
+   ```bash
+   cp .env.example .env
+   # Edit .env if you want to change default database or other settings
+   ```
+
+3. **Start Sail containers:**
+   ```bash
+   ./vendor/bin/sail up -d
+   ```
+   (If you haven't installed Sail dependencies yet, run:)
+   ```bash
+   composer install
+   npm install && npm run build
+   ```
+
+4. **Run migrations:**
+   ```bash
+   ./vendor/bin/sail artisan migrate
+   ```
+
+5. **Access the app:**
+   - Open [http://localhost](http://localhost) in your browser (preferably on mobile or small screen).
+
+### Option 2: Manual (Local PHP, Composer, Node)
 
 1. **Clone the repository:**
    ```bash
